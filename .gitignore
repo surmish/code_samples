@@ -1,12 +1,4 @@
-sorting_algorithms/bst_sort.hpp.gch
-sorting_algorithms/bubble_sort.hpp.gch
-sorting_algorithms/bucket_sort.hpp.gch
-sorting_algorithms/heap_sort.hpp.gch
-sorting_algorithms/insertion_sort.hpp.gch
-sorting_algorithms/main.o
-sorting_algorithms/merge_sort.hpp.gch
-sorting_algorithms/quick_sort.hpp.gch
-sorting_algorithms/radix_sort.hpp.gch
-sorting_algorithms/selection_sort.hpp.gch
-sorting_algorithms/shell_sort.hpp.gch
+sorting_algorithms/*.hpp.gch
+*/a.out
+*/*.o
 sorting_algorithms/sort
