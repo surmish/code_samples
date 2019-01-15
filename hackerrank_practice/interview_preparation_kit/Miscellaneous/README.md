@@ -1,6 +1,4 @@
-# sorting
-
-c++ implementation of common sorting techniques
+c++ implementation of some hackerrank problems
 
 1: Flipping bits: https://www.hackerrank.com/challenges/flipping-bits/problem
 
