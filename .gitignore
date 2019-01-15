@@ -1,4 +1,7 @@
-sorting_algorithms/*.hpp.gch
-*/a.out
-*/*.o
+*.hpp.gch
+*.out
+*.o
+*.plist
+*.txt
+*.json
 sorting_algorithms/sort

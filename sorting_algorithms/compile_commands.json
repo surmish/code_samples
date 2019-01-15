@@ -1,7 +1,0 @@
-[
-    {
-        "directory": "./",
-        "command": "clang++ -lboost_program_options main.cpp",
-        "file": "/home/archlinux/sorting_algorithms/main.cpp"
-    }
-]
