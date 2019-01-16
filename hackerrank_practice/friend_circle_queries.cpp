@@ -47,28 +47,22 @@ maxCircle(const std::vector<std::vector<uint32_t>> &queries) {
       }
     } else {
       if (int_map[elem[0]] != int_map[elem[1]]) {
+        std::shared_ptr<std::list<uint32_t>> list_ptr = nullptr;
+        std::shared_ptr<std::list<uint32_t>> temp_list_ptr = nullptr;
         if (int_map[elem[0]]->size() > int_map[elem[1]]->size()) {
-          auto list_ptr = int_map[elem[0]];
-          auto temp_list_ptr = int_map[elem[1]];
-          for (auto i = temp_list_ptr->begin(); i != temp_list_ptr->end();) {
-            list_ptr->push_back(*i);
-            int_map[*i] = list_ptr;
-            i = temp_list_ptr->erase(i);
-          }
-          if (max < list_ptr->size()) {
-            max = list_ptr->size();
-          }
+          list_ptr = int_map[elem[0]];
+          temp_list_ptr = int_map[elem[1]];
         } else {
-          auto list_ptr = int_map[elem[1]];
-          auto temp_list_ptr = int_map[elem[0]];
-          for (auto i = temp_list_ptr->begin(); i != temp_list_ptr->end();) {
-            list_ptr->push_back(*i);
-            int_map[*i] = list_ptr;
-            i = temp_list_ptr->erase(i);
-          }
-          if (max < list_ptr->size()) {
-            max = list_ptr->size();
-          }
+          list_ptr = int_map[elem[1]];
+          temp_list_ptr = int_map[elem[0]];
+        }
+        for (auto i = temp_list_ptr->begin(); i != temp_list_ptr->end();) {
+          list_ptr->push_back(*i);
+          int_map[*i] = list_ptr;
+          i = temp_list_ptr->erase(i);
+        }
+        if (max < list_ptr->size()) {
+          max = list_ptr->size();
         }
       } else {
         if (max < int_map[elem[0]]->size()) {
