@@ -1,3 +1,4 @@
+/* Maximum XOR: https://www.hackerrank.com/challenges/maximum-xor/problem */
 #include <algorithm>
 #include <bitset>
 #include <climits>

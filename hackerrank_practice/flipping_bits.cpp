@@ -1,3 +1,5 @@
+/* Flipping bits: https://www.hackerrank.com/challenges/flipping-bits/problem */
+
 #include <algorithm>
 #include <bitset>
 #include <cmath>

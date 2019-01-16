@@ -1,3 +1,4 @@
+/* Primality: https://www.hackerrank.com/challenges/ctci-big-o/problem */
 #include <algorithm>
 #include <bitset>
 #include <cmath>
