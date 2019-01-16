@@ -1,4 +1,5 @@
-/* Primality: https://www.hackerrank.com/challenges/ctci-big-o/problem */
+/* Friend circle queries: https://www.hackerrank.com/challenges/friend-circle-queries/problem */
+
 #include <algorithm>
 #include <bitset>
 #include <cmath>
