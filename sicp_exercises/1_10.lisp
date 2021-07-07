@@ -23,10 +23,10 @@
 (printf " f[3] is ~a\n" (f 3)) ; 6
 (printf " f[4] is ~a\n" (f 4)) ; 8
 
-(printf "function g[n] = 2^n \n") 
-; A(1,n)  = 2*A(1,(n-1)) 
-;         = 2*2*2*... [n-2 times] * A(1,(n-(n-2))) 
-;         = 2^(n-2)*2*A(1,1) 
+(printf "function g[n] = 2^n \n")
+; A(1,n)  = 2*A(1,(n-1))
+;         = 2*2*2*... [n-2 times] * A(1,(n-(n-2)))
+;         = 2^(n-2)*2*A(1,1)
 ;         = 2^n for n > 0
 (printf " g[0] is ~a\n" (g 0)) ; 0
 (printf " g[1] is ~a\n" (g 1)) ; 2
@@ -34,12 +34,12 @@
 (printf " g[3] is ~a\n" (g 3)) ; 8
 (printf " g[4] is ~a\n" (g 4)) ; 16
 
-(printf "function h[n] = 2^(2^(2^ ... n times)) \n") 
-; A(2,n)  = A(1,A(2,(n-1))) 
-;         = 2^A(2,(n-1)) 
+(printf "function h[n] = 2^(2^(2^ ... n times)) \n")
+; A(2,n)  = A(1,A(2,(n-1)))
+;         = 2^A(2,(n-1))
 ;         = 2^A(1,A(2,(n-2)))
 ;         = 2^2^A(2,(n-2))
-;         = 2^2...[n-2] times ^ A(2,(n-(n-2))) 
+;         = 2^2...[n-2] times ^ A(2,(n-(n-2)))
 ;         = 2^2^2....(n-2) times ^A(2,2)
 ;         = 2^2^2....(n-2) times ^ A(1,A(2,1))
 ;         = 2^2^2....(n-2) times ^ 2^2
