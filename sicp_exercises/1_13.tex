@@ -1,0 +1,69 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+\begin{document}
+
+\title{SICP Problem 1.13}
+\author{urmish}
+
+\maketitle
+
+\begin{abstract}
+Prove that $Fib(n)$ is the closest integer to $\varphi^n/5.$
+\end{abstract}
+
+\section{Introduction}
+Using hint in the original question, we approach the problem using proof by induction.
+We can see 
+
+\begin{equation}
+    F(1) = \frac{\varphi^1 - \Psi^1}{\sqrt 5} = 1
+\end{equation}
+
+We assume the following to be true:
+
+\begin{equation}
+\label{assumption}
+F(n) = \frac{\varphi^n - \Psi^n}{\sqrt 5}
+\end{equation}
+
+And prove the following statement:
+\begin{equation}
+F(n+1) = \frac{\varphi^{n+1} - \Psi^{n+1}}{\sqrt 5}
+\end{equation}
+
+The above equation can be rewritten as follows:
+
+\begin{equation}
+\begin{split}
+\frac{\varphi^{n+1} - \Psi^{n+1}}{\sqrt 5} & = \frac{\varphi^n - \Psi^n}{\sqrt 5} + \frac{\varphi^{n-1} - \Psi^{n-1}}{\sqrt 5} \\
+\varphi^{n+1} - \Psi^{n+1} & = \varphi^n - \Psi^n + \varphi^{n-1} - \Psi^{n-1} \\
+\end{split}
+\end{equation}
+
+It should be sufficient to prove the above equation to prove the hint. \\
+
+Note that:
+\begin{equation}
+\begin{split} 
+\varphi + \Psi & = 1 \\
+\varphi . \Psi & =  -1
+\end{split}
+\end{equation}
+
+\begin{equation}
+\begin{split}
+  \varphi^{n+1} - \Psi^{n+1} & = (\varphi + \Psi) . (\varphi^n - \varphi^{n-1}.\Psi + \varphi^{n-2}.\Psi^2 - \varphi^{n-3}.\Psi^3 \dots - \varphi^2.\Psi^{n-2} + \varphi.\Psi^{n-1} - \Psi^n) \\
+  & = (\varphi^n - \Psi^n) - (\varphi^{n-1}.\Psi - \varphi^{n-2}.\Psi^2 + \varphi^{n-3}.\Psi^3 - \dots + \varphi^2.\Psi^{n-2} - \varphi.\Psi^{n-1} ) \\
+  & = (\varphi^n - \Psi^n) - (-\varphi^{n-2} + \varphi^{n-3}.\Psi - \varphi^{n-4}.\Psi^2 + \dots - \varphi^2\Psi^{n-4} + \varphi.\Psi^{n-3} - \Psi^{n-2} ) \\
+  & = F(n) + (\varphi^{n-2} - \varphi^{n-3}.\Psi + \varphi^{n-4}.\Psi^2 - \dots + \varphi^2\Psi^{n-4} - \varphi.\Psi^{n-3} + \Psi^{n-2} ) \\
+  & = F(n) + (\varphi + \Psi).(\varphi^{n-1} - \psi^{n-1}) \\
+  & = F(n) + F(n-1)
+\end{split}
+\end{equation}
+
+This proves the statement for $n+1$. You can see $\lvert\Psi\rvert < 1$. As $n$ increases $\lvert\Psi^n\rvert \to 0 $ proving $F(n) = \lfloor\varphi^n/\sqrt 5\rceil$
+
+
+\end{document}
